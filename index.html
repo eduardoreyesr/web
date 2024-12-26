@@ -1,329 +1,986 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>TDO | Digital</title>
-		<meta name="description" content="Desarrollo de Web Sites con HTML5 - CSS3 - Bootstrap 5.3.3 - JavaScript" />
-		<meta name="keywords" content="template, web design, html, javascript, layout, css, slide out, bootstrap" />
-		<meta name="author" content="tdo" />
-		<link rel="shortcut icon" href="favicon.ico">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
-	</head>
-	<body class="loading">
-		<svg class="hidden">
-			<symbol id="icon-arrow" viewBox="0 0 24 24">
-				<title>arrow</title>
-				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
-			</symbol>
-			<symbol id="icon-drop" viewBox="0 0 24 24">
-				<title>drop</title>
-				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
-			</symbol>
-			<symbol id="icon-menu" viewBox="0 0 24 13">
-				<title>menu</title>
-				<path d="M.75 1.515h22.498a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5zM23.248 5.265H8.168a.75.75 0 0 0 0 1.5h15.08a.75.75 0 0 0 0-1.5zM23.248 10.514H4.322a.75.75 0 0 0 0 1.5h18.926a.75.75 0 0 0 0-1.5z"/>
-			</symbol>
-			<symbol id="icon-dot" viewBox="0 0 24 24">
-				<title>dot</title>
-				<path d="M11.5 9c-.69 0-1.28.244-1.768.732A2.41 2.41 0 0 0 9 11.5c0 .69.244 1.28.732 1.767A2.409 2.409 0 0 0 11.5 14c.69 0 1.28-.244 1.768-.733A2.408 2.408 0 0 0 14 11.5c0-.69-.244-1.28-.732-1.768A2.408 2.408 0 0 0 11.5 9z"/>
-			</symbol>
-			<symbol id="icon-cross" viewBox="0 0 24 24">
-				<title>cross</title>
-				<path d="M11.449 11.962l-5.1 5.099a.363.363 0 1 0 .513.512L12 12.436l5.137 5.137a.361.361 0 0 0 .513 0 .363.363 0 0 0 0-.512l-5.099-5.1 5.102-5.102a.363.363 0 1 0-.512-.513L12 11.487l-5.141-5.14a.363.363 0 0 0-.513.512l5.103 5.103z"/>
-			</symbol>
-			<symbol id="icon-arrowlong" viewBox="0 0 32 11">
-				<title>arrow-long</title>
-				<path d="M27.166.183a.619.619 0 0 0-.878 0 .619.619 0 0 0 0 .878l2.735 2.735H.768a.624.624 0 0 0 0 1.248h28.254L26.287 7.77a.619.619 0 0 0 0 .878.617.617 0 0 0 .441.183c.163 0 .32-.061.442-.183l3.796-3.796a.623.623 0 0 0-.005-.878L27.166.183z"/>
-			</symbol>
-			<symbol id="icon-close" viewBox="0 0 24 24">
-				<title>close</title>
-				<path d="M21 4.565L19.435 3 12 10.435 4.565 3 3 4.565 10.435 12 3 19.435 4.565 21 12 13.565 19.435 21 21 19.435 13.565 12z"/>
-			</symbol>
-			<symbol id="icon-navup" viewBox="0 0 50 50">
-				<title>navup</title>
-				<path d="M20.259 28.211l5.07-5.03 5.075 5.034a.36.36 0 0 0 .51 0 .356.356 0 0 0 0-.506l-5.323-5.28a.404.404 0 0 0-.135-.084.364.364 0 0 0-.384.08l-5.324 5.28a.356.356 0 0 0 0 .506c.141.14.37.14.51 0z" />
-			</symbol>
-			<symbol id="icon-navdown" viewBox="0 0 50 50">
-				<title>navdown</title>
-				<path d="M20.259 22.43l5.07 5.03 5.075-5.034a.36.36 0 0 1 .51 0c.14.14.14.366 0 .506l-5.323 5.28a.404.404 0 0 1-.135.084.364.364 0 0 1-.384-.081l-5.324-5.28a.356.356 0 0 1 0-.505c.141-.14.37-.14.51 0z" />
-			</symbol>
-			<symbol id="icon-grid" viewBox="0 0 24 24">
-				<title>grid</title>
-				<path d="M8.982 8.982h5.988v5.988H8.982zM0 0h5.988v5.988H0zM8.982 17.965h5.988v5.988H8.982zM0 8.982h5.988v5.988H0zM0 17.965h5.988v5.988H0zM17.965 0h5.988v5.988h-5.988zM8.982 0h5.988v5.988H8.982zM17.965 8.982h5.988v5.988h-5.988zM17.965 17.965h5.988v5.988h-5.988z"/>
-			</symbol>
-			<symbol id="icon-github" viewBox="0 0 32.6 31.8">
-				<title>github</title>
-				<path d="M16.3,0C7.3,0,0,7.3,0,16.3c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4C7.4,10.7,6.8,9,7.7,6.8c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C32.6,7.3,25.3,0,16.3,0z"/>
-			</symbol>
-		</svg>
-		<main>
-			<div class="sections">
-				<header class="sections__header">
-					<h1 class="title">tdo digital</h1>
-				</header>
-				<!-- codrops links -->
-				<div class="codrops-links">
-					<a class='btn-twt' href="tel:+51999939008"></a>
-					<!-- <a class="codrops-icon codrops-icon--prev" href="https://tympanus.net/Development/GradientTopographyAnimation/" 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TDO | Digital</title>
+    <meta
+      name="description"
+      content="Desarrollo de Web Sites con HTML5 - CSS3 - Bootstrap 5.3.3 - JavaScript"
+    />
+    <meta
+      name="keywords"
+      content="template, web design, html, javascript, layout, css, slide out, bootstrap"
+    />
+    <meta name="author" content="tdo" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script>
+      document.documentElement.className = "js";
+      var supportsCssVars = function () {
+        var e,
+          t = document.createElement("style");
+        return (
+          (t.innerHTML = "root: { --tmp-var: bold; }"),
+          document.head.appendChild(t),
+          (e = !!(
+            window.CSS &&
+            window.CSS.supports &&
+            window.CSS.supports("font-weight", "var(--tmp-var)")
+          )),
+          t.parentNode.removeChild(t),
+          e
+        );
+      };
+      supportsCssVars() ||
+        alert(
+          "Please view this demo in a modern browser that supports CSS Variables."
+        );
+    </script>
+    <!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <!-- agregado para los iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body class="loading">
+    <svg class="hidden">
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <title>arrow</title>
+        <polygon
+          points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "
+        />
+      </symbol>
+      <symbol id="icon-drop" viewBox="0 0 24 24">
+        <title>drop</title>
+        <path
+          d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"
+        />
+        <path
+          d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"
+        />
+      </symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 13">
+        <title>menu</title>
+        <path
+          d="M.75 1.515h22.498a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5zM23.248 5.265H8.168a.75.75 0 0 0 0 1.5h15.08a.75.75 0 0 0 0-1.5zM23.248 10.514H4.322a.75.75 0 0 0 0 1.5h18.926a.75.75 0 0 0 0-1.5z"
+        />
+      </symbol>
+      <symbol id="icon-dot" viewBox="0 0 24 24">
+        <title>dot</title>
+        <path
+          d="M11.5 9c-.69 0-1.28.244-1.768.732A2.41 2.41 0 0 0 9 11.5c0 .69.244 1.28.732 1.767A2.409 2.409 0 0 0 11.5 14c.69 0 1.28-.244 1.768-.733A2.408 2.408 0 0 0 14 11.5c0-.69-.244-1.28-.732-1.768A2.408 2.408 0 0 0 11.5 9z"
+        />
+      </symbol>
+      <symbol id="icon-cross" viewBox="0 0 24 24">
+        <title>cross</title>
+        <path
+          d="M11.449 11.962l-5.1 5.099a.363.363 0 1 0 .513.512L12 12.436l5.137 5.137a.361.361 0 0 0 .513 0 .363.363 0 0 0 0-.512l-5.099-5.1 5.102-5.102a.363.363 0 1 0-.512-.513L12 11.487l-5.141-5.14a.363.363 0 0 0-.513.512l5.103 5.103z"
+        />
+      </symbol>
+      <symbol id="icon-arrowlong" viewBox="0 0 32 11">
+        <title>arrow-long</title>
+        <path
+          d="M27.166.183a.619.619 0 0 0-.878 0 .619.619 0 0 0 0 .878l2.735 2.735H.768a.624.624 0 0 0 0 1.248h28.254L26.287 7.77a.619.619 0 0 0 0 .878.617.617 0 0 0 .441.183c.163 0 .32-.061.442-.183l3.796-3.796a.623.623 0 0 0-.005-.878L27.166.183z"
+        />
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <title>close</title>
+        <path
+          d="M21 4.565L19.435 3 12 10.435 4.565 3 3 4.565 10.435 12 3 19.435 4.565 21 12 13.565 19.435 21 21 19.435 13.565 12z"
+        />
+      </symbol>
+      <symbol id="icon-navup" viewBox="0 0 50 50">
+        <title>navup</title>
+        <path class="iconnavup"
+          d="M20.259 28.211l5.07-5.03 5.075 5.034a.36.36 0 0 0 .51 0 .356.356 0 0 0 0-.506l-5.323-5.28a.404.404 0 0 0-.135-.084.364.364 0 0 0-.384.08l-5.324 5.28a.356.356 0 0 0 0 .506c.141.14.37.14.51 0z"
+        />
+      </symbol>
+      <symbol id="icon-navdown" viewBox="0 0 50 50">
+        <title>navdown</title>
+        <path
+          d="M20.259 22.43l5.07 5.03 5.075-5.034a.36.36 0 0 1 .51 0c.14.14.14.366 0 .506l-5.323 5.28a.404.404 0 0 1-.135.084.364.364 0 0 1-.384-.081l-5.324-5.28a.356.356 0 0 1 0-.505c.141-.14.37-.14.51 0z"
+        />
+      </symbol>
+      <symbol id="icon-grid" viewBox="0 0 24 24">
+        <title>grid</title>
+        <path
+          d="M8.982 8.982h5.988v5.988H8.982zM0 0h5.988v5.988H0zM8.982 17.965h5.988v5.988H8.982zM0 8.982h5.988v5.988H0zM0 17.965h5.988v5.988H0zM17.965 0h5.988v5.988h-5.988zM8.982 0h5.988v5.988H8.982zM17.965 8.982h5.988v5.988h-5.988zM17.965 17.965h5.988v5.988h-5.988z"
+        />
+      </symbol>
+      <symbol id="icon-github" viewBox="0 0 32.6 31.8">
+        <title>github</title>
+        <path
+          d="M16.3,0C7.3,0,0,7.3,0,16.3c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4C7.4,10.7,6.8,9,7.7,6.8c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C32.6,7.3,25.3,0,16.3,0z"
+        />
+      </symbol>
+    </svg>
+    <main>
+      <div class="sections">
+        <header class="sections__header">
+          <h1 class="title">
+			<span style="color: rgb(0, 0, 255);">tdo</span> digital
+		  </h1>
+        </header>
+		<!-- <div class="sections__header">	
+			<span class="section__description-inner" style="text-align: justify; margin-top: 10%; width: 96%;font-weight: bold;
+			font-size: 30px;">
+				Nosotros</span
+			  >	
+		</div> -->
+		<div class="sections__header">				
+				<span class="section__description-inner" style="text-align: justify; margin-top: 6%; width: 96%;
+				font-size: 15px;">
+					<h1>Nosotros</h1>
+					Como agencia digital ayudamos a nuevas, pequeñas y grandes empresas a mejorar su experiencia digital en la web. Diseñamos tu futuro en el mundo digital.</span
+				  >	
+		</div>
+        <!-- codrops links -->
+        <div class="codrops-links">
+          <a class="btn-twt" href="tel:+51999939008"></a>
+          <!-- <a class="codrops-icon codrops-icon--prev" href="https://tympanus.net/Development/GradientTopographyAnimation/" 
 						title="Previous Demo">
 						<svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
 					<a class="codrops-icon codrops-icon--drop" href="https://tympanus.net/codrops/?p=33851" 
 						title="Back to the article">
 							<svg class="icon icon--github"><use xlink:href="#icon-github"></use></svg></a>	 -->
-					<!-- <a class="codrops-icon codrops-icon--drop" href="https://tympanus.net/codrops/?p=33851" title="Back to the article">
+          <!-- <a class="codrops-icon codrops-icon--drop" href="https://tympanus.net/codrops/?p=33851" title="Back to the article">
 						<svg class="icon icon--drop"><use xlink:href="#icon-drop"></use></svg></a> -->
-					
-				</div>
-				<!-- menu -->
-				<nav class="menu">
-					<ul class="menu__inner">
-						<li class="menu__item"><a class="menu__item-link" href="#">Nosotros</a></li>
-						<li class="menu__item"><a class="menu__item-link" href="#">Web Sites</a></li>
-						<li class="menu__item"><a class="menu__item-link" href="#">Testimonios</a></li>
-						<li class="menu__item"><a class="menu__item-link" href="#">Contáctanos</a></li>
-					</ul>
-					<div class="menu__toggle">
-						<span class="menu__toggle-inner menu__toggle-inner--open">
-							<svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg>
-						</span>
-						<span class="menu__toggle-inner menu__toggle-inner--close">
-							<svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg>
-						</span>
-					</div>
-				</nav>
-				<!-- facts expander with toggles; content for each is in its section -->
-				<div class="facts">
-					<div class="facts__toggle">
-						<span class="facts__toggle-inner facts__toggle-inner--more">
-							<svg class="icon icon--dot"><use xlink:href="#icon-dot"></use></svg>
-							<span class="facts__toggle-text">ver más detalle</span>
-						</span>
-						<span class="facts__toggle-inner facts__toggle-inner--less">
-							<svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
-							<span class="facts__toggle-text">ver menos detalle</span>
-						</span>
-					</div>
-					<button class="button-contentclose">
-						<svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg>
-					</button>
-				</div>
-				<!-- index -->
-				<div class="sections__index">
-					<span class="sections__index-current">
-						<span class="sections__index-inner">01</span>
-					</span>
-					<span class="sections__index-total">04</span>
-				</div>
-				<!-- navigation down -->
-				<nav class="sections__nav">
-					<button class="sections__nav-item sections__nav-item--prev">
-						<svg class="icon icon--navup"><use xlink:href="#icon-navup"></use></svg>
-					</button>
-					<button class="sections__nav-item sections__nav-item--next">
-						<svg class="icon icon--navdown"><use xlink:href="#icon-navdown"></use></svg>
-					</button>
-				</nav>
-				<!-- sections -->
-				<section class="section section--current">
-					<div class="section__content">
-						<h1 class="title">&nbsp;&nbsp;web site</h1>
-						<h2 class="section__title">Básica</h2>
-						
-						<p class="section__description"><span class="section__description-inner">
-							Resaltamos los beneficios de tu negocio y los adaptamos a la web, realizando el Diseño de tu páginas web personalizada en base a tu marca, y en base a tu necesidad, adaptandose al mercado al que se dirige tu negocio.</span></p>
-					</div>
-					<div class="section__img">
-						<div class="section__img-inner" 
-						style="background-image: url(img/01.jpg)">						
-						</div>						
-					</div>
-					
-					<div class="section__more">
-						<div class="section__more-inner section__more-inner--bg1">
-							<span class="section__more-text">Want to know more?</span>
-							<a href="#" class="section__more-link">
-								<span class="section__more-linktext">Explore all hikes</span>
-								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
-							</a>
-						</div>
-					</div>
-					<div class="section__expander"></div>
-					<ul class="section__facts">
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Web Site Básica</h3>
-							<span class="section__facts-detail">Ideal para comenzar.</span>
-						</li>
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">S/. 750 + igv</h3>
-							<span class="section__facts-detail">Único pago.</span>
-						</li>
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Tiempo Entrega</h3>
-							<span class="section__facts-detail">5 días.</span>
-						</li>
-						<li class="section__facts-item section__facts-item--clickable" data-gallery="gallery1">
-							<div class="section__facts-img">
-								<img src="img/01.jpg" width="200px" height="150px" alt="Some image"
-								style="opacity: 70%;"/>
-								<svg class="icon icon--grid"><use xlink:href="#icon-grid"></use></svg>
-							</div>
-							<h3 class="section__facts-title">Más Información</h3>
-							<span class="section__facts-detail">Sobre nuestro servicio</span>
-						</li>
-					</ul>
-					<div class="section__gallery" id="gallery1">
-						<!-- <p class="info" style="color: white;">Web Site <span style="color: yellow;">Básica</span> ideal para iniciar tu negocio</p> -->
-						<h3 class="section__gallery-item section__gallery-item--title">Más Información</h3>
-						<a class="section__gallery-item" href="#"><img src="img/thumb1.jpg" alt="Some image"/></a>
+        </div>
+        <!-- menu -->
+        <!-- <nav class="menu">
+          <ul class="menu__inner">
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">Nosotros</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">Web Sites</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">Testimonios</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">Contáctanos</a>
+            </li>
+          </ul>
+          <div class="menu__toggle">
+            <span class="menu__toggle-inner menu__toggle-inner--open">
+              <svg class="icon icon--menu">
+                <use xlink:href="#icon-menu"></use>
+              </svg>
+            </span>
+            <span class="menu__toggle-inner menu__toggle-inner--close">
+              <svg class="icon icon--close">
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </span>
+          </div>
+        </nav> -->
+        <!-- facts expander with toggles; content for each is in its section -->
+        <div class="facts">
+          <div class="facts__toggle">
+            <span class="facts__toggle-inner facts__toggle-inner--more">
+              <svg class="icon icon--dot">
+                <use xlink:href="#icon-dot"></use>
+              </svg>
+              <span class="facts__toggle-text">ver más detalle</span>
+            </span>
+            <span class="facts__toggle-inner facts__toggle-inner--less">
+              <svg class="icon icon--cross">
+                <use xlink:href="#icon-cross"></use>
+              </svg>
+              <span class="facts__toggle-text">ver menos detalle</span>
+            </span>
+          </div>
+          <button class="button-contentclose">
+            <svg class="icon icon--close">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+        <!-- index -->
+        <div class="sections__index">
+          <span class="sections__index-current">
+            <span class="sections__index-inner">01</span>
+          </span>
+          <span class="sections__index-total">04</span>
+        </div>
+        <!-- navigation down -->
+        <nav class="sections__nav">
+          <button class="sections__nav-item sections__nav-item--prev">
+            <svg class="icon icon--navup">
+              <use xlink:href="#icon-navup"></use>
+            </svg>
+          </button>
+          <button class="sections__nav-item sections__nav-item--next">
+            <svg class="icon icon--navdown">
+              <use xlink:href="#icon-navdown"></use>
+            </svg>
+          </button>
+        </nav>
+        <!-- WhatsApp -->
+        <div>
+          <a
+            class="wsp"
+            href="https://wa.me/51999939008/?text=tu%20texto%20personalizado"
+            target="_blank"
+            data-descr="WhatsApp"
+            ><img src="img/wspw.png" width="52px" height="52px"
+          /></a>
+        </div>
+        <!-- sections -->
+        <section class="section section--current">
+          <div class="section__content">
+            <h1 class="title">&nbsp;&nbsp;web site</h1>
+            <h2 class="section__title">Básica</h2>
+
+            <p class="section__description">
+              <span class="section__description-inner">
+                Resaltamos los beneficios de tu negocio y los adaptamos a la
+                web, realizando el Diseño de tu páginas web personalizada en
+                base a tu marca, y en base a tu necesidad, adaptandose al
+                mercado al que se dirige tu negocio.</span
+              >
+            </p>
+          </div>
+          <div class="section__img">
+            <div
+              class="section__img-inner"
+              style="background-image: url(img/01.jpg)"
+            ></div>
+          </div>
+		  <!-- footer -->
+          <div class="section__more">
+            <div class="section__more-inner section__more-inner--bg1">
+              <!-- <span class="section__more-text">Want to know more?</span> -->
+              <a href="#" class="section__more-link">
+                <!-- <span class="section__more-linktext">Explore all hikes</span>
+                <svg class="icon icon--arrowlong">
+                  <use xlink:href="#icon-arrowlong"></use>
+                </svg> -->
+              </a>
+            </div>
+          </div>
+		<!-- footer -->
+          <div class="section__expander"></div>
+          <ul class="section__facts">
+            <li class="section__facts-item">
+              <h3 class="section__facts-title">Web Site Básica</h3>
+              <span class="section__facts-detail">Ideal para comenzar.</span>
+            </li>
+            <li class="section__facts-item">
+              <h3 class="section__facts-title">S/. 650 + igv</h3>
+              <span class="section__facts-detail">Único pago.</span>
+            </li>
+            <li class="section__facts-item">
+              <h3 class="section__facts-title">Tiempo de Entrega</h3>
+              <span class="section__facts-detail">5 días.</span>
+            </li>
+            <li
+              class="section__facts-item section__facts-item--clickable"
+              data-gallery="gallery1"
+            >
+              <div class="section__facts-img">
+                <img
+                  src="img/thumb1.jpg"
+                  alt="Some image"
+                  style="opacity: 70%"
+                />
+                <svg class="icon icon--grid">
+                  <use xlink:href="#icon-grid"></use>
+                </svg>
+              </div>
+              <h3 class="section__facts-title">Más Información</h3>
+              <span class="section__facts-detail">Sobre nuestro servicio</span>
+            </li>
+          </ul>
+          <div class="section__gallery" id="gallery1">
+            <!-- <p class="info" style="color: white;">Web Site <span style="color: yellow;">Básica</span> ideal para iniciar tu negocio</p> -->
+            <h3 class="section__gallery-item section__gallery-item--title">
+              Web Site Básica
+            </h3>
+            <ul
+              class="section__gallery-item section__gallery-item--title title-ul"
+            >
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Diseño web Personalizado
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                5 Secciones principales
+                <ul>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Home
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Nosotros
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Productos o Servicios
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Clientes
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Contacto: enlazado a su email
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Sitio Web Responsive (Multipantalla)
+                <ul>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; PC o Laptop
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Tablet
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Móviles
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Diseño de Slider Principal interactivo
+                <ul>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Hasta 3 imágenes de servicios o lineas de negocio
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Whatsapp
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Enlace a las redes sociales
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Mapa de Ubicación con Google Maps
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Garantía por 1 año
+                <ul>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Hasta 2 Actualizaciones Web GRATIS
+                  </li>
+                </ul>
+              </li>
+              <li style="margin-top: 40px">
+                <i class="section__gallery-item--title bi bi-info-circle"></i>
+                Importante
+                <ul>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Dominio <b>.com</b> 1 año Gratis (Renovación S/ 70 +
+                    IGV anual)
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Hosting 1 año Gratis (Renovación S/ 220 + IGV anual)
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Dominio <b>.pe</b> ó <b>.com.pe</b> (Renovación S/
+                    110 + IGV anual)
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Pago: 50% al inicio (El saldo en la entrega final)
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- <a class="section__gallery-item" href="#"><img src="img/thumb1.jpg" alt="Some image"/></a>
 						<a class="section__gallery-item" href="#"><img src="img/thumb2.jpg" alt="Some image"/></a>
 						<a class="section__gallery-item" href="#"><img src="img/thumb3.jpg" alt="Some image"/></a>
 						<a class="section__gallery-item" href="#"><img src="img/thumb4.jpg" alt="Some image"/></a>
 						<a class="section__gallery-item" href="#"><img src="img/thumb5.jpg" alt="Some image"/></a>
-						<a class="section__gallery-item" href="#"><img src="img/thumb6.jpg" alt="Some image"/></a>
-						
-					</div>
-				</section><!--/ section -->
-				<section class="section">
-					<div class="section__content">
-						<h1 class="title">&nbsp;&nbsp;web site</h1>
-						<h2 class="section__title">Pro</h2>
-						<p class="section__description"><span class="section__description-inner">A lake is an area filled with water, localized in a basin, that is surrounded by land, apart from any river or other outlet that serves to feed or drain the lake. Lakes lie on land and are not part of the ocean.</span></p>
-					</div>
-					<div class="section__img">
-						<div class="section__img-inner" style="background-image: url(img/2.jpg)"></div>
-					</div>
-					<div class="section__more">
-						<div class="section__more-inner section__more-inner--bg2">
-							<span class="section__more-text">Want to know more?</span>
-							<a href="#" class="section__more-link">
-								<span class="section__more-linktext">Explore the lakes</span>
-								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
-							</a>
+						<a class="section__gallery-item" href="#"><img src="img/thumb6.jpg" alt="Some image"/></a> -->
+          </div>
+        </section>
+        <!--/ section -->
+        <section class="section">
+          <div class="section__content">
+            <h1 class="title">&nbsp;&nbsp;web site</h1>
+            <h2 class="section__title">Pro</h2>
+            <p class="section__description">
+              <span class="section__description-inner"
+                >				
+				Diseñamos tu página web de alto nivel para tu negocio. Diseño web hecho a la medida, intuitivo y emotivo que darán a tus usuarios una experiencia memorable. Tu página web será una experiencia visual para convertir a tus usuarios en clientes.
+				</span
+              >
+            </p>
+          </div>
+          <div class="section__img">
+            <div
+              class="section__img-inner"
+              style="background-image: url(img/2.jpg)"
+            ></div>
+          </div>
+		  <!-- footer -->
+          <div class="section__more">
+            <div class="section__more-inner section__more-inner--bg2">
+              <!-- <span class="section__more-text">Want to know more?</span>
+              <a href="#" class="section__more-link">
+                <span class="section__more-linktext">Explore the lakes</span>
+                <svg class="icon icon--arrowlong">
+                  <use xlink:href="#icon-arrowlong"></use>
+                </svg>
+              </a> -->
+            </div>
+          </div>
+		  <!-- footer -->
+          <div class="section__expander"></div>
+          <ul class="section__facts">
+            <li class="section__facts-item">
+              <h3 class="section__facts-title">Web Site Profesional</h3>
+              <span class="section__facts-detail"
+                >Para negocios en ascenso.</span
+              >
+            </li>
+            <li class="section__facts-item">
+              <h3 class="section__facts-title">S/. 850 + igv</h3>
+              <span class="section__facts-detail">Único pago.</span>
+            </li>
+            <li class="section__facts-item">
+              <h3 class="section__facts-title">Tiempo de Entrega</h3>
+              <span class="section__facts-detail">9 días.</span>
+            </li>
+            <li
+              class="section__facts-item section__facts-item--clickable"
+              data-gallery="gallery2"
+            >
+              <div class="section__facts-img">
+                <img src="img/thumb2.jpg" alt="Some image" />
+                <svg class="icon icon--grid">
+                  <use xlink:href="#icon-grid"></use>
+                </svg>
+              </div>
+              <h3 class="section__facts-title">Más Información</h3>
+              <span class="section__facts-detail">Sobre nuestro servicio</span>
+            </li>
+          </ul>
+          <div class="section__gallery" id="gallery2">
+            <h3 class="section__gallery-item section__gallery-item--title">
+              Web Site Profesional
+            </h3>
+            <ul
+              class="section__gallery-item section__gallery-item--title title-ul"
+            >
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Diseño web Personalizado
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                10 Secciones principales
+                <ul>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Home
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Nosotros
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Misión y Visión
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Productos y Servicios
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Galería de imágenes
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Profafolio
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Clientes
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Contacto: enlazado a su email
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Sitio Web Responsive (Multipantalla)
+                <ul>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; PC o Laptop
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Tablet
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Móviles
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Diseño de Slider Principal interactivo
+                <ul>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Hasta 3 imágenes de servicios o lineas de negocio
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Whatsapp
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Enlace a las redes sociales
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Mapa de Ubicación con Google Maps
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Garantía por 1 año
+                <ul>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp;1 Actualización Web GRATIS
+                  </li>
+                </ul>
+              </li>
+              <li style="margin-top: 34px">
+                <i class="section__gallery-item--title bi bi-info-circle"></i>
+                Importante
+                <ul>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Dominio <b>.com</b> 1 año Gratis (Renovación S/ 70 +
+                    IGV anual)
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Hosting 1 año Gratis (Renovación S/ 350 + IGV anual)
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Dominio <b>.pe</b> ó <b>.com.pe</b> (Renovación S/
+                    130 + IGV anual)
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Pago: 50% al inicio (El saldo en la entrega final)
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!--/ section -->
+        <section class="section">
+          <div class="section__content">
+            <h1 class="title">&nbsp;&nbsp;web site</h1>
+            <h4 class="section__title">Tienda</h4>
+            <p class="section__description">
+              <span class="section__description-inner"
+                >Con nuestra metodología de diseño, crearemos tu tienda virtual de forma ágil de la mano de nuestros profesionales especializados. Cuidamos el diseño integral de tu nueva tienda virtual.</span
+              >
+            </p>
+          </div>
+          <div class="section__img">
+            <div
+              class="section__img-inner"
+              style="background-image: url(img/3.jpg)"
+            ></div>
+          </div>
+		  <!-- footer -->
+          <div class="section__more">
+            <div class="section__more-inner section__more-inner--bg3">
+              <!-- <span class="section__more-text">Want to know more?</span>
+              <a href="#" class="section__more-link">
+                <span class="section__more-linktext">Explore the paths</span>
+                <svg class="icon icon--arrowlong">
+                  <use xlink:href="#icon-arrowlong"></use>
+                </svg>
+              </a> -->
+            </div>
+          </div>
+		  <!-- footer -->
+          <div class="section__expander"></div>
+          <ul class="section__facts">
+            <li class="section__facts-item">
+              <h3 class="section__facts-title">Tienda Virtual</h3>
+              <span class="section__facts-detail"
+                >Migra tus ventas vía online</span
+              >
+            </li>
+            <li class="section__facts-item">
+              <h3 class="section__facts-title">S/. 1800 + igv</h3>
+              <span class="section__facts-detail">Único pago.</span>
+            </li>
+            <li class="section__facts-item">
+              <h3 class="section__facts-title">Tiempo de Entrega</h3>
+              <span class="section__facts-detail">15 días.</span>
+            </li>
+            <!-- <li class="section__facts-item">
+              <h3 class="section__facts-title">Starting to walk</h3>
+              <span class="section__facts-detail"
+                >An aerial view of the lake</span
+              >
+            </li> -->
+            <li
+              class="section__facts-item section__facts-item--clickable"
+              data-gallery="gallery3"
+            >
+              <div class="section__facts-img">
+                <img src="img/thumb3.jpg" alt="Some image" />
+                <svg class="icon icon--grid">
+                  <use xlink:href="#icon-grid"></use>
+                </svg>
+              </div>
+              <h3 class="section__facts-title">Más Información</h3>
+              <span class="section__facts-detail">Sobre nuestro servicio</span>
+            </li>
+          </ul>
+          <div class="section__gallery" id="gallery3">
+            <h3 class="section__gallery-item section__gallery-item--title">
+              Tienda Virtual
+            </h3>
+            <ul
+              class="section__gallery-item section__gallery-item--title title-ul"
+            >
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Tienda Personalizada
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Proyecto Woocomerce
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                10 Secciones o Bloques
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                De 25 a 100 Productos inicales
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Sitio Web Responsive (Multipantalla)
+                <ul>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; PC o Laptop
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Tablet
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Móviles
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Diseño de Slider Principal interactivo
+                <ul>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; De 3 a 4 imágenes de servicios o lineas de negocio
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Whatsapp
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Enlace a las redes sociales
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Mapa de Ubicación con Google Maps
+              </li>
+              <li>
+                <i class="section__gallery-item--title bi bi-check2-square"></i>
+                Garantía por 1 año
+              </li>
+              <li style="margin-top: 34px">
+                <i class="section__gallery-item--title bi bi-info-circle"></i>
+                Renovación anual S/ 900 + IGV
+                <ul>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; 50 GB Almacenamiento SSD (Gratis el 1er Año)
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Dominio .com (Gratis el 1er Año)
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Correos Coroporativos (Gratis el 1er Año)
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Certificado SSL (Gratis el 1er Año)
+                  </li>
+                  <li class="detail-li">
+                    <i
+                      class="section__gallery-item--title bi bi-arrow-right"
+                    ></i>
+                    &nbsp; Pago: 50% al inicio (El saldo en la entrega final)
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!--/ section -->
+        <section class="section">
+          <div class="section__content">
+            <h2 class="section__title">Contacto</h2>
+            <p class="section__description">
+              <span class="section__description-inner">
+				Envianos un mensaje comentandonos tu solicitud, llamarnos desde el botón Contacto o WhatsApp, nos podemos reunir vía Teams, Zoom o Google Meet. Déjanos tus datos y cuentanos más sobre tu proyecto para hacer algo grandioso.						
+              </span>	
+			  <span style="margin: 0 0 0 74%;">				
+					<a href="#">
+						<i class="bi bi-facebook" style="color: blueviolet; font-size: 18px;"></i>
+					</a>&nbsp;					
+					<a href="#">
+						<i class="bi bi-instagram" style="color: blueviolet; font-size: 18px;"></i>
+					</a>&nbsp;					
+					<a href="#">
+						<i class="bi bi-tiktok" style="color: blueviolet; font-size: 18px;"></i>
+					</a>&nbsp;
+					<a href="#">
+						<i class="bi bi-youtube" style="color: blueviolet; font-size: 18px;"></i>
+					</a>&nbsp;		
+					<a href="#">
+						<i class="bi bi-twitter-x" style="color: blueviolet; font-size: 18px;"></i>
+					</a>
+			</span>			  
+            </p>
+          </div>
+          <div class="section__img">
+            <div
+              class="section__img-inner"
+              style="background-image: url(img/4.jpg); padding: 90px"
+            >
+			<!-- contacto -->
+			
+				<div class="form__toggle"
+					>
+				  <form action="https://formsubmit.co/eduardoreyesr@outlook.com" method="post">		
+					<input type="hidden" name="_template" value="table">			
+					<!-- <label for="nombre" class="form__label">Empresa o Persona Natural</label> -->
+					<input class="input" style="width: 60%;" name="Nombre" id="nombre"
+					 type="text" placeholder="Empresa o Persona Natural" required />
+					<input class="input" type="tel" style="width: 24%;" name="Celular" id="celular"
+					placeholder="Celular" required/>
+					<input type="hidden" name="_autoresponse" value="your custom message">
+					<input class="input" style="width: 42%;" name="email" id="email"
+					type="email" placeholder="Email" required/>
+					<select class="input" style="width: 42%;" required name="Asunto" id="asunto">
+						<option selected disabled>Seleccionar Asunto</option>
+						<option value="Básico">Plan Básico</option>
+						<option value="Profesional">Plan Profesional</option>
+						<option value="Tienda">Tienda Virtual</option>
+						<option value="Otro">Otro</option>
+					</select>
+					<textarea class="input" style="width: 92%;height: 24%;" name="Mensaje" id="mensaje"
+					placeholder="Cuéntanos un poco más"></textarea>		
+					<div style=" margin: 0 0 3.5% 2%; display: flex;">
+						<div style="width: 67%;margin: 0;">
+							<input type="checkbox" style="border: 1px white solid; margin-left: 3%;
+							background: none;" name="Acepto">
+							<label style="font-size: 12px; color: white;">Acepto las políticas de privacidad de este sitio web</label>
+						</div>
+						<div style="width: 18%;margin: 0;">
+						 	<button type="submit" class="btn-form"></button>	
 						</div>
 					</div>
-					<div class="section__expander"></div>
-					<ul class="section__facts">
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Biggest lake</h3>
-							<span class="section__facts-detail">Caspian sea in Kazakhstan</span>
-						</li>
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Coolest activity</h3>
-							<span class="section__facts-detail">Kayaking the whole lake</span>
-						</li>
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Lake depth</h3>
-							<span class="section__facts-detail">With 55m it's the deepest</span>
-						</li>
-						<li class="section__facts-item section__facts-item--clickable" data-gallery="gallery2">
-							<div class="section__facts-img">
-								<img src="img/thumb2.jpg" alt="Some image"/>
-								<svg class="icon icon--grid"><use xlink:href="#icon-grid"></use></svg>
-							</div>
-							<h3 class="section__facts-title">More impressions</h3>
-							<span class="section__facts-detail">A collection of images</span>
-						</li>
-					</ul>
-					<div class="section__gallery" id="gallery2">
-						<h3 class="section__gallery-item section__gallery-item--title">More impressions</h3>
-						<a class="section__gallery-item" href="#"><img src="img/thumb5.jpg" alt="Some image"/></a>
-						<a class="section__gallery-item" href="#"><img src="img/thumb6.jpg" alt="Some image"/></a>
-						<a class="section__gallery-item" href="#"><img src="img/thumb1.jpg" alt="Some image"/></a>
-						<a class="section__gallery-item" href="#"><img src="img/thumb2.jpg" alt="Some image"/></a>
-						<a class="section__gallery-item" href="#"><img src="img/thumb3.jpg" alt="Some image"/></a>
-						<a class="section__gallery-item" href="#"><img src="img/thumb4.jpg" alt="Some image"/></a>
-					</div>
-				</section><!--/ section -->
-				<section class="section">
-					<div class="section__content">
-						<h1 class="title">&nbsp;&nbsp;web site</h1>
-						<h2 class="section__title">Business</h2>
-						<p class="section__description"><span class="section__description-inner">A footpath (also pedestrian way, walking trail, nature trail) is a type of thoroughfare that is intended for use only by pedestrians and not other forms of traffic such as motorized vehicles, cycles, and horses.</span></p>
-					</div>
-					<div class="section__img">
-						<div class="section__img-inner" style="background-image: url(img/33.jpg)"></div>
-					</div>
-					<div class="section__more">
-						<div class="section__more-inner section__more-inner--bg3">
-							<span class="section__more-text">Want to know more?</span>
-							<a href="#" class="section__more-link">
-								<span class="section__more-linktext">Explore the paths</span>
-								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
-							</a>
-						</div>
-					</div>
-					<div class="section__expander"></div>
-					<ul class="section__facts">
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Lovely paths</h3>
-							<span class="section__facts-detail">Caspian sea in Kazakhstan</span>
-						</li>
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Haunted ways</h3>
-							<span class="section__facts-detail">Kayaking the whole lake</span>
-						</li>
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Running and more</h3>
-							<span class="section__facts-detail">With 55m it's the deepest</span>
-						</li>
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Starting to walk</h3>
-							<span class="section__facts-detail">An aerial view of the lake</span>
-						</li>
-					</ul>
-				</section><!--/ section -->
-				<section class="section">
-					<div class="section__content">
-						<h2 class="section__title">Contacto</h2>
-						<p class="section__description"><span class="section__description-inner">A river is a natural flowing watercourse, usually freshwater, flowing towards an ocean, sea, lake or another river. In some cases a river flows into the ground and becomes dry at the end of its course without reaching another body of water.</span></p>
-					</div>
-					<div class="section__img">
-						<div class="section__img-inner" style="background-image: url(img/4.jpg)"></div>
-					</div>
-					<div class="section__more">
-						<div class="section__more-inner section__more-inner--bg4">
-							<span class="section__more-text">Want to know more?</span>
-							<a href="#" class="section__more-link">
-								<span class="section__more-linktext">Explore all rivers</span>
-								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
-							</a>
-						</div>
-					</div>
-					<div class="section__expander"></div>
-					<ul class="section__facts">
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Celular</h3>
-							<span class="section__facts-detail">
-								+51 999 939 008						
-							</span>
-						</li>
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Correo Electrónico</h3>
-							<span class="section__facts-detail">
-								eduardoreyesr@outlook.com
-								
-							</span>
-						</li>
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Dirección</h3>
-							<span class="section__facts-detail">Av. Las Flores 654 - Lima</span>
-						</li>
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Horario de Atención</h3>
-							<span class="section__facts-detail">Lunes a Viernes: 9 am - 7 pm</span>
-						</li>
-					</ul>
-				</section><!--/ section -->
-			</div><!--/ sections -->
-		</main>
-		<script src="js/imagesloaded.pkgd.min.js"></script>
-		<script src="js/charming.min.js"></script>
-		<script src="js/anime.min.js"></script>
-		<script src="js/main.js"></script>
-	</body>
+		
+				  </form>
+				</div>
+			 
+			</div>
+          </div>
+		  <!-- footer -->
+          <div class="section__more">
+            <div class="section__more-inner section__more-inner--bg4">
+              <!-- <span class="section__more-text">Want to know more?</span>
+              <a href="#" class="section__more-link">
+                <span class="section__more-linktext">Explore all rivers</span>
+                <svg class="icon icon--arrowlong">
+                  <use xlink:href="#icon-arrowlong"></use>
+                </svg>
+              </a> -->
+            </div>
+          </div>
+		  <!-- footer -->
+          <div class="section__expander"></div>
+          <ul class="section__facts">
+            <li class="section__facts-item">
+              <h3 class="section__facts-title">Celular</h3>
+              <span class="section__facts-detail">
+                <i class="bi bi-telephone-inbound"></i>&nbsp; +51 999 939 008
+              </span>
+            </li>
+            <li class="section__facts-item">
+              <h3 class="section__facts-title">Correo Electrónico</h3>
+              <span class="section__facts-detail"
+                ><i class="bi bi-envelope-at"></i>&nbsp;
+                eduardoreyesr@outlook.com
+              </span>
+            </li>
+            <li class="section__facts-item">
+              <h3 class="section__facts-title">Dirección</h3>
+              <span class="section__facts-detail"
+                ><i class="bi bi-buildings"></i>&nbsp;&nbsp;Av. Las Flores 654 -
+                Lima</span
+              >
+            </li>
+            <li class="section__facts-item">
+              <h3 class="section__facts-title">Horario de Atención</h3>
+              <span class="section__facts-detail"
+                ><i class="bi bi-clock-history"></i>&nbsp; Lun a Vier: 9 am - 7
+                pm</span
+              >
+            </li>
+			<li class="section__facts-item">				
+				<span class="section__facts-detail"
+				  >&copy; All Rights Reserved - 2024</span
+				>
+			  </li>
+          </ul>
+        </section>
+        <!--/ section -->
+      </div>
+      <!--/ sections -->
+    </main>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/charming.min.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

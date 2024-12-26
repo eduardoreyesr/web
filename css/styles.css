@@ -1,0 +1,346 @@
+/* Lista de planes */
+.title-ul{
+    margin-top: 80px;
+    list-style: none;
+    padding-left: 30px;
+    gap: 14px;   
+}
+.detail-li{
+    list-style: none;
+    font-size: 13.5px;
+}
+
+/*formulario contacto*/
+.form__toggle {
+    /* font-weight: bold;
+    cursor: pointer; */
+    width: 100%;
+    /* padding: 40px 0px 68px 0px; */
+    /* margin: 0px 20px 0px 20px; */
+    padding:  1vw 0 2.2vw 2vw;;
+    margin: 0 0 0 0;
+    /* height: 35rem; */
+    position: relative;
+    display: grid;
+    grid-template: 100% / 100%;
+    /* color: var(--color-text-facts);*/
+    pointer-events: auto; 
+    background-color: rgb(0, 0, 0);
+    opacity: 90%;
+}
+
+.input {
+    margin: 1.2rem;
+    /* width: 400px; */
+    height: 1.8rem;
+    font-size: 14px;
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline: 0;
+    border-bottom: 1px rgb(255, 255, 255) solid;
+
+    transition: border-color 0.2s;
+
+    &::placeholder {
+        font-size: 14px;
+        color: #ffffffb6;
+      }    
+
+      &:placeholder-shown ~ .form__label {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 20px;
+      }
+}  
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+  }
+  .input:focus {
+    ~ .form__label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      color: #11998e;
+      font-weight:700;    
+    }
+    padding-bottom: 2px;  
+    font-weight: 700;
+    border-width: 2px;
+    border-image: linear-gradient(to right, #ffff00,#ffff80);
+    border-image-slice: 1;
+  }
+    
+  .input{
+    &:required,&:invalid { box-shadow:none; }
+  }
+  
+/*WhatsApp*/
+.wsp{
+    /* padding-left: 93%;    */
+    position: fixed;
+    top: 86%;
+    width: 52px;
+    height: 53px;
+    border-radius: 50%;
+    background-color: #54cd04;
+    right: 2.5%;
+    z-index: 1000; /*indica sobre que caja va estar - funciona cuando position esta declarado*/
+}
+
+.wsp:hover{
+    background-color: #71e821;
+}
+
+.wsp[data-descr]:hover::after{
+  content: attr(data-descr);
+  position: absolute;
+  right: 0;
+  top: 59px; 
+  border: 1.5px #ffffff solid;
+  border-radius: 10px;
+  background-color: #54cd04;
+  padding: 8px;
+  color: #ffffff;
+  font-size: 13px;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+/* Individual effects */
+.grid {
+	position: relative;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* Anchor will cover the whole item by default */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/*---------------*/
+/***** Julia *****/
+/*---------------*/
+
+figure.effect-julia {
+	background: #2f3238;
+}
+
+figure.effect-julia img {
+	max-width: none;
+	height: 400px;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-julia figcaption {
+	text-align: left;
+}
+
+figure.effect-julia h2 {
+	position: relative;
+	padding: 0.5em 0;
+}
+
+figure.effect-julia p {
+	display: inline-block;
+	margin: 0 0 0.25em;
+	padding: 0.4em 1em;
+	background: rgba(255,255,255,0.9);
+	color: #2f3238;
+	text-transform: none;
+	font-weight: 500;
+	font-size: 75%;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-360px,0,0);
+	transform: translate3d(-360px,0,0);
+}
+
+figure.effect-julia p:first-child {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+figure.effect-julia p:nth-of-type(2) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-julia p:nth-of-type(3) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:first-child {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+figure.effect-julia:hover p:nth-of-type(2) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:nth-of-type(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-julia:hover img {
+	opacity: 0.4;
+	-webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
+}
+
+figure.effect-julia:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/*agregado*/
+/*Botón contacto menu*/
+.btn-twt::before {
+	content: 'Contacto';
+	display: inline-block;
+	border: 1px solid rgba(0, 0, 0,.5) 50%;
+	color: rgb(255, 255, 255);
+	padding: 8px 41px;
+	width: 160px;
+	height: 38px;
+	text-align: center;
+	background: linear-gradient(to left, rgba(0,0,0,1) 50%, rgb(255, 255, 255) 50%);
+	background-size: 200% 100%;
+	background-position:right bottom;
+	vertical-align: middle;
+	margin-left: 10px;
+	transition:all 0.5s ease;
+  }
+  .btn-twt:hover::before {
+	content: 'Contacto';
+	border: 1px solid rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	text-align: center;
+	background-position:left bottom;
+	transition:all 0.5s ease;
+  }
+  /*Botón formulario*/
+.btn-form::before {
+	content: 'Enviar Mensaje';
+	display: inline-block;
+	border: 1px solid yellow;
+	color: rgb(255, 255, 0);
+	padding: 8px 20px;
+	width: 164px;
+	height: 38px;
+	/* text-align: center; */
+	background: linear-gradient(to left, rgba(0,0,0,1) 50%, rgb(255, 255, 0) 0%);
+	background-size: 200% 100%;
+	background-position:right bottom;
+	vertical-align: middle;
+	/* margin-left: 30%; */
+	transition:all 0.5s ease;
+  }
+  .btn-form:hover::before {
+	content: 'Enviar Mensaje';
+	border: 1px solid yellow;
+	color: rgb(0, 0, 0);
+	/* text-align: center; */
+	background-position:left bottom;
+	transition:all 0.5s ease;
+  }
+/* texto vertical */
+  .info {
+	position: fixed;
+	bottom: 6vmax;
+	right: 2vmax;
+	margin: 0;
+	-webkit-writing-mode: vertical-lr;
+	writing-mode: vertical-lr;
+	/* z-index: 100; */
+	color: var(--color-info);
+	text-align: right;
+}
