@@ -1,9 +1,9 @@
 /* Lista de planes */
 .title-ul{
-    margin-top: 80px;
+    margin-top: 15%;
     list-style: none;
     padding-left: 30px;
-    gap: 14px;   
+    gap: 8px;   
 }
 .detail-li{
     list-style: none;
@@ -17,7 +17,7 @@
     width: 100%;
     /* padding: 40px 0px 68px 0px; */
     /* margin: 0px 20px 0px 20px; */
-    padding:  1vw 0 2.2vw 2vw;;
+    padding:  0.6vw 0vw 2.2vw 2vw;;
     margin: 0 0 0 0;
     /* height: 35rem; */
     position: relative;
@@ -32,7 +32,7 @@
 .input {
     margin: 1.2rem;
     /* width: 400px; */
-    height: 1.8rem;
+    /* height: 1.8rem; */
     font-size: 14px;
     background: rgb(0, 0, 0);
     color: #ffffff;
@@ -52,7 +52,7 @@
       &:placeholder-shown ~ .form__label {
         font-size: 1.3rem;
         cursor: text;
-        top: 20px;
+        top: 18px;
       }
 }  
 
